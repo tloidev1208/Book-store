@@ -1,11 +1,18 @@
 import BookList from "@/components/BookList"
 import BookOverview from "@/components/BookOverview"
+import { sampleBooks } from "@/constants";
 
-export default function Home() {
-  return (
-   <>
-   <BookOverview />
-   <BookList />
-   </>
-  )
-}
+const Home = () => (
+  <>
+  <BookOverview {... sampleBooks[0]} />
+
+  <BookList
+    title="Lastet Books"
+    books={sampleBooks}
+    containerClassName="mt-28"
+
+    />
+    </>
+);
+
+export default Home;
