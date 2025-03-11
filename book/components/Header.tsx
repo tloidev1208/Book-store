@@ -21,7 +21,7 @@ const Header = () => {
               pathname === "/library" ? "text-yellow-400" : "text-gray-400"
             )}
           >
-            Library..
+            Library..hihi
           </Link>
         </li>
       </ul>
