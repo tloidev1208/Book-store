@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Big_Shoulders_Display } from "next/font/google";
 import "./globals.css";
 import { ReactNode } from "react";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const bigShoulders = Big_Shoulders_Display({
+  variable: "--font-big-shoulders",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "700"], // Chọn các trọng số cần thiết
 });
 
 export const metadata: Metadata = {
@@ -21,9 +17,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${bigShoulders.variable} antialiased`}>
         {children}
       </body>
     </html>
