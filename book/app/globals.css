@@ -79,6 +79,65 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  --light-100: #d6e0ff;
+  --primary: #e7c9a5;
+  --dark-100: #16191e;
+  --dark-300: #232839;
+  --dark-600: #333c5c;
+  --dark-800: #1e2230;
+  --light-500: #8d8d8d;
+  --light-600: #f9fafb;
+  --light-700: #e2e8f0;
+  --light-800: #f8fafc;
+  --light-400: #edf1f1;
+  --light-300: #f8f8ff;
+  --light-200: #eed1ac;
+  --light-100: #d6e0ff;
+  --red-400: #f46f70;
+  --red-500: #e27233;
+  --red-800: #ef3a4b;
+  --red: #ef3a4b;
+  --green-100: #ecfdf3;
+  --green-400: #4c7b62;
+  --green-500: #2cc171;
+  --green-800: #027a48;
+  --green: #027a48;
+  --blue-100: #0089f1;
+  --sidebar-ring: #446688;
+  --sidebar-border: #446688;
+  --sidebar-accent-foreground: #e7c9a5;
+  --sidebar-accent: #446688;
+  --sidebar-primary-foreground: #e7c9a5;
+  --sidebar-primary: #446688;
+  --sidebar-foreground: #16191e;
+  --sidebar: #446688;
+  --chart-5: #2cc171;
+  --chart-4: #446688;
+  --chart-3: #446688;
+  --chart-2: #446688;
+  --chart-1: #446688;
+  --ring: #446688;
+  --input: #446688;
+  --border: #446688;
+  --destructive-foreground: #f46f70;
+  --destructive: #ef3a4b;
+  --accent-foreground: #2cc171;
+  --accent: #2cc171;
+  --muted-foreground: #4c7b62;
+  --muted: #2cc171;
+  --secondary-foreground: #e7c9a5;
+  --secondary: #2cc171;
+  --primary-foreground: #446688;
+  --primary: #e7c9a5;
+  --popover-foreground: #446688;
+  --popover: #2cc171;
+  --card-foreground: #e7c9a5;
+  --card: #2cc171;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  
 }
 
 .dark {
@@ -159,6 +218,26 @@
 .form-input:focus-visible {
   box-shadow: none;
 }
+
+.book-copies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem; /* Tương đương với gap-4 */
+  margin-top: 0.25rem; /* Tương đương với mt-1 */
+}
+
+.book-copies p {
+  font-size: 1.25rem; /* Tương đương với text-xl */
+  color: var(--light-100); /* Giả sử bạn đã định nghĩa biến này */
+}
+
+.book-copies p span {
+  margin-left: 0.5rem; /* Tương đương với ml-2 */
+  font-weight: 600; /* Tương đương với font-semibold */
+  color: var(--primary); /* Giả sử bạn đã định nghĩa biến này */
+}
+
 
 /* Book Card */
 .book-title {
