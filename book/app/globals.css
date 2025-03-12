@@ -46,6 +46,7 @@
 }
 
 :root {
+  --font-primary: var(--font-big-shoulders);
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
@@ -180,6 +181,7 @@
     @apply border-border outline-ring/50;
   }
   body {
+    font-family: var(--font-primary), sans-serif;
     @apply bg-background text-foreground;
   }
 }
