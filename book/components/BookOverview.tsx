@@ -57,7 +57,7 @@ const BookOverview = ({
       </div>
       
       <div className="relative flex flex-1 justify-center">
-        <div className="relative"> 
+        <div className="relative">
            <BookCover
            variant="wide"
            className="z-10"
