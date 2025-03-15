@@ -240,6 +240,25 @@
   color: var(--primary); /* Giả sử bạn đã định nghĩa biến này */
 }
 
+/* Book List */
+.book-list {
+  margin-top: 2.5rem; /* Tương đương mt-10 */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem; /* Tương đương gap-5 */
+}
+
+@media (max-width: 475px) {
+  .book-list {
+    justify-content: space-between; /* max-xs:justify-between */
+  }
+}
+
+@media (min-width: 475px) {
+  .book-list {
+    gap: 2.5rem; /* xs:gap-10 */
+  }
+}
 
 /* Book Card */
 .book-title {
