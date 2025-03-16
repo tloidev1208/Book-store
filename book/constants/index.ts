@@ -43,9 +43,9 @@ export const sampleBooks = [
     available_copies: 5,
     description:
       "Phía Trên Những Ngọn Cây ,là một cuốn tiểu thuyết mang đậm chất suy tưởng, nơi nhân vật chính tìm kiếm ý nghĩa cuộc sống giữa những tầng cao của ký ức và thực tại.",
-    color: "#f8e036",
+    color: "#303030",
     cover:
-      "https://drive.google.com/file/d/1cjQVUqTTCHTnG3aa8q3YkXW_soXQOBbg/view?usp=sharing",
+      "https://drive.google.com/uc?export=view&id=1cjQVUqTTCHTnG3aa8q3YkXW_soXQOBbg",
     video: "/sample-video.mp4?updatedAt=1722593504152",
     summary:
       "An essential guide to understanding the core mechanisms of JavaScript, focusing on scope and closures.",
@@ -60,9 +60,9 @@ export const sampleBooks = [
     available_copies: 50,
     description:
       "Kể về hành trình phiêu lưu của chú dế mèn dũng cảm và kiêu hãnh. Trong chuyến đi, Dế Mèn gặp gỡ nhiều loài vật khác nhau, trải qua những bài học sâu sắc về tình bạn, lòng dũng cảm và trách nhiệm.",
-    color: "#ed6322",
+    color: "#7EC0B7",
     cover:
-      "https://drive.google.com/file/d/1VN7Ej-qlFCgsZhWJz3pyWSVS4jNw3rBr/view?usp=sharing",
+      "https://drive.google.com/uc?export=view&id=1VN7Ej-qlFCgsZhWJz3pyWSVS4jNw3rBr",
     video: "/sample-video.mp4?updatedAt=1722593504152",
     summary:
       "A magical tale of Santiago, an Andalusian shepherd boy, who embarks on a journey to find a worldly treasure.",
@@ -77,8 +77,8 @@ export const sampleBooks = [
     available_copies: 23,
     description:
       "Tác phẩm kể về câu chuyện tình yêu đầy trắc trở giữa Nhật Linh – một cô gái dịu dàng, biết hy sinh và Đại – một người đàn ông mạnh mẽ, kiên cường. Họ đến với nhau trong bối cảnh hiểu lầm, thù hận và bị cuốn vào vòng xoáy của quyền lực, tiền bạc.",
-    color: "#ffffff",
-    cover: "https://drive.google.com/file/d/1Yqgk__1w3_SORsKA8wELPdVhhmASeBoF/view?usp=sharing",
+    color: "#F1E7CC",
+    cover: "https://drive.google.com/uc?export=view&id=1Yqgk__1w3_SORsKA8wELPdVhhmASeBoF",
     video: "/sample-video.mp4?updatedAt=1722593504152",
     summary:
       "Rules for focused success in a distracted world, teaching how to cultivate deep focus to achieve peak productivity.",
@@ -93,9 +93,9 @@ export const sampleBooks = [
     available_copies: 56,
     description:
       "Tác phẩm khuyến khích độc giả trân trọng tuổi trẻ, không lãng phí thời gian quý báu và luôn giữ trong mình ngọn lửa nhiệt huyết",
-    color: "#080c0d",
+    color: "#51AECC",
     cover:
-      "https://drive.google.com/file/d/1n2Yrmh1-3FZDH-Z9o4HgF8gNZbsqN5as/view?usp=sharing",
+      "https://drive.google.com/uc?export=view&id=1n2Yrmh1-3FZDH-Z9o4HgF8gNZbsqN5as",
     video: "/sample-video.mp4?updatedAt=1722593504152",
     summary:
       "A handbook of agile software craftsmanship, offering best practices and principles for writing clean and maintainable code.",
@@ -110,9 +110,9 @@ export const sampleBooks = [
     available_copies: 3,
     description:
       "Một câu chuyện đầy cảm xúc về tình yêu, ký ức và những điều không thể quên.",
-    color: "#100f15",
+    color: "#D9DBDD",
     cover:
-      "https://drive.google.com/file/d/1DG3IskDTwhHhotyxLwyfA3vIGTk4ad-y/view?usp=sharing",
+      "https://drive.google.com/uc?export=view&id=1DG3IskDTwhHhotyxLwyfA3vIGTk4ad-y",
     video: "/sample-video.mp4?updatedAt=1722593504152",
     summary:
       "A timeless guide for developers to hone their skills and improve their programming practices.",
@@ -127,9 +127,9 @@ export const sampleBooks = [
     available_copies: 5,
     description:
       "Cuốn sách có thể kết hợp giữa triết lý tài chính và phát triển bản thân, giúp người đọc hiểu rõ hơn về tâm lý, tư duy thành công và cách biến ước mơ thành hiện thực.",
-    color: "#ffffff",
+    color: "#0E1F38",
     cover:
-      "https://drive.google.com/file/d/1HaIKUkfHsGzBvGY4iHf-Y1XsxOtZaEDU/view?usp=sharing",
+      "https://drive.google.com/uc?export=view&id=1HaIKUkfHsGzBvGY4iHf-Y1XsxOtZaEDU",
     video: "/sample-video.mp4?updatedAt=1722593504152",
     summary:
       "Morgan Housel explores the unique behaviors and mindsets that shape financial success and decision-making.",
