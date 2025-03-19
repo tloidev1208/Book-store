@@ -1,3 +1,5 @@
+import { University } from "lucide-react";
+
 export const sampleBooks = [
 {
     id: 1,
@@ -136,3 +138,16 @@ export const sampleBooks = [
   },
 ];
 
+export const FIELD_NAMES={
+  fullName: "Full name",
+  email: "Email",
+  universityId: "University ID Number",
+  password: "Password",
+  universityCard:"Upload University Id Card",
+};
+export const FIELD_TYPES={
+  fullName:"text",
+  email:"email",
+  universityId:"number",
+  password:"password",
+}
