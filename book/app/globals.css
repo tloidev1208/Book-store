@@ -396,7 +396,7 @@
 /* Book Overview */
 .book-overview {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: row;
   align-items: center;
   gap: 3rem;
 }
