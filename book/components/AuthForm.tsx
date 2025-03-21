@@ -26,6 +26,7 @@ import {
 import {Input} from "@/components/ui/input";
 import {Files} from "lucide-react";
 import ImageUpload from "./ui/ImageUpload";
+
 interface Props<T extends FieldValues> {
   schema: ZodType<T>;
   defaultValues: T;
@@ -74,7 +75,7 @@ const AuthForm = <T extends FieldValues>({
                   </FormLabel>
                   <FormControl>
                     {field.name === "universityCard" ? (
-                      <ImageUpload />
+                      <ImageUpload onFileChange={field.onChange}/>
                     ) : (
                       <Input
                         required

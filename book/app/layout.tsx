@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Big_Shoulders_Display } from "next/font/google";
 import "./globals.css";
 import { ReactNode } from "react";
+import { Toaster } from "react-hot-toast";
 
 const bigShoulders = Big_Shoulders_Display({
   variable: "--font-big-shoulders",
@@ -19,6 +20,8 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
     <html lang="en">
       <body className={`${bigShoulders.variable} antialiased`}>
         {children}
+
+        <Toaster/>
       </body>
     </html>
   );
