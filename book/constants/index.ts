@@ -139,11 +139,11 @@ export const sampleBooks = [
 ];
 
 export const FIELD_NAMES={
-  fullName: "Full name",
+  fullName: "Họ và tên",
   email: "Email",
-  universityId: "University ID Number",
-  password: "Password",
-  universityCard:"Upload University Id Card",
+  universityId: "Mã số sinh viên",
+  password: "Mật khẩu",
+  universityCard:"Ảnh thẻ sinh viên",
 };
 export const FIELD_TYPES={
   fullName:"text",

@@ -64,7 +64,7 @@ const ImageUpload = ({ onFileChange }: { onFileChange: (filePath: string) => voi
           }}
         >
           <Image src="/icons/upload.svg" alt="upload_icon" width={20} height={20} className="object-contain mx-auto" />
-          <p className="text-base text-light-100">Upload a File</p>
+          <p className="text-base text-light-100">Tải ảnh</p>
         </button>
 
         {file && (

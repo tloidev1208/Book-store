@@ -7,7 +7,7 @@ export const signUpSchema = z.object( {
  fullName: z.string().min(3),
  email: z.string().email(),
  universityId: z.coerce.number(),
- universityCard: z.string().nonempty('University card is required'),
+ universityCard: z.string().nonempty('Hình ảnh thẻ sinh viên không được để trống!'),
     password: z.string().min(8),
 });
 

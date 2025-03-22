@@ -51,12 +51,12 @@ const AuthForm = <T extends FieldValues>({
   return (
     <div className=" flex flex-col gap-4">
       <h1 className="text-2xl font-semibold text-whiet">
-        {isSignIn ? "Welcome back to BokkWise" : "Create your library account"}
+        {isSignIn ? "Chào mừng bạn trở lại với Thư viện thông minh! " : "Tạo tài khoản thư viện của bạn"}
       </h1>
       <p className="text-light-100">
         {isSignIn
-          ? "Access the vast collection of resources, and stay update"
-          : "Please complete all fields and upload a valid university ID to gain access to the library"}
+          ? "Đăng nhập"
+          : "Vui lòng điền đầy đủ thông tin và tải ảnh thẻ sinh viên của bạn để truy cập vào thư viện"}
       </p>
       <Form {...form}>
         <form
@@ -95,17 +95,17 @@ const AuthForm = <T extends FieldValues>({
           ))}
 
           <Button type="submit" className="form-btn">
-            {isSignIn ? "Sign In" : "Sign Up"}
+            {isSignIn ? "Đăng nhập" : "Đăng ký"}
           </Button>
         </form>
       </Form>
       <p className="text-center text-base font-medium">
-        {isSignIn ? "New to BookWise?" : "Already have an account?"}
+        {isSignIn ? "Bạn là thành viên mới?" : "Bạn đã có tài khoản?"}
         <Link
           href={isSignIn ? "/sign-up" : "/sign-in"}
           className="font-bold text-primary"
         >
-          {isSignIn ? "Create an account" : "Sign in"}
+          {isSignIn ? "Hãy đăng ký tài khoản" : "Đăng nhập"}
         </Link>
       </p>
     </div>
