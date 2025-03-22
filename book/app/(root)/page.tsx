@@ -8,7 +8,7 @@ const Home = () => (
     <BookOverview {...sampleBooks[0]} />
 
     <BookList
-      title="Lastet Books"
+      title="Sách mới nhất"
       books={sampleBooks}
       containerClassName="mt-28"
     />
