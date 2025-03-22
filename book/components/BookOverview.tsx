@@ -21,11 +21,11 @@ const BookOverview = ({
         <h1>{title} </h1>
         <div className="book-info">
           <p>
-            By <span className="font-semibold text-light-200">{author}</span>
+            Tác giả <span className="font-semibold text-light-200">{author}</span>
           </p>
 
           <p>
-            Category{" "}
+            Thể loại {" "}
             <span className="font-semibold text-light-200">{genre}</span>
           </p>
 
@@ -37,11 +37,11 @@ const BookOverview = ({
 
         <div className="book-copies">
           <p>
-            Total Books: <span>{total_copies}</span>
+            Tổng số sách: <span>{total_copies}</span>
           </p>
 
           <p>
-            Available Books: <span>{available_copies}</span>
+            Số lượng sách có sẵn: <span>{available_copies}</span>
           </p>
         </div>
 
@@ -49,7 +49,7 @@ const BookOverview = ({
 
        <Button className="book-overivew_btn">
         <Image src="/icons/book.svg" alt="book" width={20} height={20} />
-        <p className="font-bebas-neue text-xl text-dark-100">Borrow</p>
+        <p className="font-bebas-neue text-xl text-dark-100">Mượn sách</p>
         </Button>
 
 
