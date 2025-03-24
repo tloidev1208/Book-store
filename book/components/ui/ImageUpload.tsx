@@ -71,7 +71,7 @@ const ImageUpload = ({ onFileChange }: { onFileChange: (filePath: string) => voi
           <IKImage
             alt="Uploaded Image"
             path={file.filePath}
-            width={500}
+            width={1000}
             height={500}
             className="mt-4 rounded-lg shadow-lg"
           />
