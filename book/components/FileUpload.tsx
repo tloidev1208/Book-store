@@ -172,22 +172,22 @@ const FileUpload = ({
         </div>
       )}
 
-{file &&
-  (type === "image" ? (
-    <IKImage
-      alt={file.filePath ?? "default-alt"}
-      path={file.filePath ?? ""}
-      width={500}
-      height={300}
-    />
-  ) : type === "video" ? (
-    <IKVideo
-      path={file.filePath ?? ""}
-      controls={true}
-      className="h-96 w-full rounded-xl"
-    />
-  ) : null)}
-
+      {file &&
+        (type === "image" ? (
+          <IKImage
+            alt={file.filePath as string}
+            path={file.filePath as string}
+            className="h-96 w-full rounded-xl"
+            width={500}
+            height={300}
+          />
+        ) : type === "video" ? (
+          <IKVideo
+            path={file.filePath as string}
+            controls={true}
+            className="h-96 w-full rounded-xl"
+          />
+        ) : null)}
     </ImageKitProvider>
   );
 };
