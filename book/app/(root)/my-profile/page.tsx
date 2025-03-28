@@ -18,7 +18,7 @@ const Page = () => {
   return (
     <>
       <form action={handleSignOut} className="mb-10">
-        {/* <Button disabled={isPending}>{isPending ? "Đang đăng xuất..." : "Đăng xuất"}</Button> */}
+        <Button disabled={isPending}>{isPending ? "Đang đăng xuất..." : "Đăng xuất"}</Button>
       </form>
 
       <BookList title="Sách mượn" books={sampleBooks} />
