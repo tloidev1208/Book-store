@@ -24,7 +24,7 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
       <body className={`${bigShoulders.variable} antialiased`}>
         {children}
 
-        <Toaster position="top-right" richColors />
+        <Toaster position="bottom-right" richColors />
       </body>
       </SessionProvider>
     </html>
