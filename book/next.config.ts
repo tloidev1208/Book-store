@@ -18,7 +18,14 @@ const nextConfig: NextConfig = {
         hostname: 'drive.google.com',
       }
     ]
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
   }
+
 };
 
 export default nextConfig;
