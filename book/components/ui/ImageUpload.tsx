@@ -47,7 +47,7 @@ const ImageUpload = ({ onFileChange }: { onFileChange: (filePath: string) => voi
 
   return (
     <>
-      <Toaster position="top-right" />
+      <Toaster position="bottom-right" />
       <ImageKitProvider publicKey={publicKey} urlEndpoint={urlEndpoint} authenticator={authenticator}>
         <IKUpload
           className="hidden"

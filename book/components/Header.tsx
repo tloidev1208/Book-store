@@ -26,15 +26,18 @@ const Header = ({ session }: { session: Session }) => {
             Thư viện
           </Link>
         </li>
-        <Avatar>
-          <AvatarFallback className="bg-amber-100">
-           {getInitials(session.user?.name || "IN")}
-           
-          </AvatarFallback>
-        </Avatar>
-
         <li>
-          <Link href="/my-profile"></Link>
+        <div className="flex flex-row items-center gap-2">
+  <Link href="/my-profile" className="flex items-center gap-2">
+    <Avatar>
+      <AvatarFallback className="bg-amber-100">
+        {getInitials(session.user?.name || "IN")}
+      </AvatarFallback>
+    </Avatar>
+    <span className="text-base text-white">Xin chào, {session.user?.name}!</span>
+  </Link>
+</div>
+
         </li>
       </ul>
     </header>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Big_Shoulders_Display } from "next/font/google";
 import "./globals.css";
 import { ReactNode } from "react";
-import { Toaster } from "react-hot-toast";
+import { Toaster } from "sonner";
 import { SessionProvider } from "next-auth/react";
 import { auth } from "@/auth";
 const bigShoulders = Big_Shoulders_Display({
@@ -24,7 +24,7 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
       <body className={`${bigShoulders.variable} antialiased`}>
         {children}
 
-        <Toaster/>
+        <Toaster position="bottom-right" richColors />
       </body>
       </SessionProvider>
     </html>
