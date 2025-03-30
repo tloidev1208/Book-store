@@ -9,11 +9,10 @@ import { sampleBooks } from "@/constants";
 const Page = () => {
   const [isPending, startTransition] = useTransition();
 
-  const handleSignOut = () => {
-    startTransition(async () => {
-      await signOut(); // Đăng xuất đúng cách
-    });
+  const handleSignOut = async () => {
+    await signOut({ callbackUrl: "/sign-in" }); // Chuyển hướng về trang đăng nhập sau khi đăng xuất
   };
+  
 
   return (
     <>
