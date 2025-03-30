@@ -1,31 +1,25 @@
-"use client";
-
-import React, { useTransition } from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
-import { signOut } from "next-auth/react";
+import { signOut } from "@/auth";
 import BookList from "@/components/BookList";
 import { sampleBooks } from "@/constants";
 
 const Page = () => {
-  const [isPending, startTransition] = useTransition();
-
-  const handleSignOut = () => {
-    startTransition(() => {
-      signOut({ callbackUrl: `${window.location.origin}/sign-in` });
-    });
-  };
-
   return (
     <>
-      <form onSubmit={(e) => { e.preventDefault(); handleSignOut(); }} className="mb-10">
-        <Button type="submit" disabled={isPending}>
-          {isPending ? "Đang đăng xuất..." : "Đăng xuất"}
-        </Button>
+      <form
+        action={async () => {
+          "use server";
+
+          await signOut();
+        }}
+        className="mb-10"
+      >
+        <Button>Logout</Button>
       </form>
 
-      <BookList title="Sách mượn" books={sampleBooks} />
+      <BookList title="Borrowed Books" books={sampleBooks} />
     </>
   );
 };
-
 export default Page;
