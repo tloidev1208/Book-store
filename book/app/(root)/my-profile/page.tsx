@@ -15,10 +15,10 @@ const Page = () => {
         }}
         className="mb-10"
       >
-        <Button>Logout</Button>
+        <Button>Đăng xuất</Button>
       </form>
 
-      <BookList title="Borrowed Books" books={sampleBooks} />
+      <BookList title="Sách đã mượn" books={sampleBooks} />
     </>
   );
 };

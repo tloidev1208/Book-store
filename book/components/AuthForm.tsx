@@ -54,12 +54,12 @@ const AuthForm = <T extends FieldValues>({
   
     if (result.success) {
       toast.success(
-        isSignIn ? "You have successfully signed in." : "You have successfully signed up."
+        isSignIn ? "Bạn đã đăng nhập thành công." : "Bạn đã đăng ký thành công."
       );
   
       router.push("/");
     } else {
-      toast.error(result.error ?? "An error occurred.");
+      toast.error(result.error ?? "Đã xảy ra lỗi. Vui lòng thử lại.");
     }
   };
   
@@ -67,12 +67,12 @@ const AuthForm = <T extends FieldValues>({
   return (
     <div className="flex flex-col gap-4">
       <h1 className="text-2xl font-semibold text-white">
-        {isSignIn ? "Welcome back to BookWise" : "Create your library account"}
+        {isSignIn ? "Chào mừng quay trở lại với thư viện Qizapy" : "Tạo tài khoản thư viện của bạn"}
       </h1>
       <p className="text-light-100">
         {isSignIn
-          ? "Access the vast collection of resources, and stay updated"
-          : "Please complete all fields and upload a valid university ID to gain access to the library"}
+          ? "Truy cập vào thư viện của bạn và khám phá những cuốn sách tuyệt vời"
+          : "Đăng ký để truy cập vào thư viện của bạn và khám phá những cuốn sách tuyệt vời"}
       </p>
       <Form {...form}>
         <form
@@ -94,7 +94,7 @@ const AuthForm = <T extends FieldValues>({
                       <FileUpload
                         type="image"
                         accept="image/*"
-                        placeholder="Upload your ID"
+                        placeholder="Tải lên thẻ sinh viên"
                         folder="ids"
                       
                         variant="dark"
@@ -118,19 +118,19 @@ const AuthForm = <T extends FieldValues>({
           ))}
 
           <Button type="submit" className="form-btn">
-            {isSignIn ? "Sign In" : "Sign Up"}
+            {isSignIn ? "Đăng nhập" : "Đăng ký"}
           </Button>
         </form>
       </Form>
 
       <p className="text-center text-base font-medium">
-        {isSignIn ? "New to BookWise? " : "Already have an account? "}
+        {isSignIn ? "Là thành viên mới? " : "Đã có tài khoản? "}
 
         <Link
           href={isSignIn ? "/sign-up" : "/sign-in"}
           className="font-bold text-primary"
         >
-          {isSignIn ? "Create an account" : "Sign in"}
+          {isSignIn ? "Tạo tài khoản" : "Đăng nhập"}
         </Link>
       </p>
     </div>
