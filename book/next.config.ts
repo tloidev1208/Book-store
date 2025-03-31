@@ -25,6 +25,7 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
     //hihi
+    //12345
   }
 
 };
