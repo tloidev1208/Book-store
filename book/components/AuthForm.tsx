@@ -54,7 +54,7 @@ const AuthForm = <T extends FieldValues>({
   
     if (result.success) {
       toast.success(
-        isSignIn ? "Bạn đã đăng nhập thành công." : "Bạn đã đăng ký thành công."
+        isSignIn ? "Bạn đã đăng nhập thành công." : "Đăng ký thành công."
       );
   
       router.push("/");
