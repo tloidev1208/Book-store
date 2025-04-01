@@ -138,6 +138,34 @@ export const sampleBooks = [
   },
 ];
 
+export const adminSideBarLinks = [
+  {
+    img: "/icons/admin/home.svg",
+    route: "/admin",
+    text: "Trang chủ",
+  },
+  {
+    img: "/icons/admin/users.svg",
+    route: "/admin/users",
+    text: "Người dùng",
+  },
+  {
+    img: "/icons/admin/book.svg",
+    route: "/admin/books",
+    text: "Sách",
+  },
+  {
+    img: "/icons/admin/bookmark.svg",
+    route: "/admin/book-requests",
+    text: "Yêu cầu mượn sách",
+  },
+  {
+    img: "/icons/admin/user.svg",
+    route: "/admin/account-requests",
+    text: "Tài khoản",
+  },
+];
+
 export const FIELD_NAMES={
   fullName: "Họ và tên",
   email: "Email",
