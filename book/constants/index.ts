@@ -151,7 +151,7 @@ export const adminSideBarLinks = [
   },
   {
     img: "/icons/admin/book.svg",
-    route: "/admin/books",
+    route: "/admin/books/new/page",
     text: "Sách",
   },
   {
