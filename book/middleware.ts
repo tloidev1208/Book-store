@@ -14,5 +14,5 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/dashboard/:path*", "/profile"], // Chỉ áp dụng middleware cho các route cần bảo vệ
+  matcher: ["/dashboard/:path*", "/admin"], // Chỉ áp dụng middleware cho các route cần bảo vệ
 };
