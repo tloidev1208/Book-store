@@ -13,9 +13,9 @@
 }
 
 .back-btn {
-    margin-bottom: 2.5rem; /* mb-10 */
+    margin-bottom: 2.5rem; 
     width: fit-content;
-    border: 1px solid #e2e8f0; /* Light-300 */
+    border: 1px solid #e2e8f0; 
     background-color: #ffffff; /* White */
     font-size: 0.75rem; /* text-xs */
     font-weight: 500; /* font-medium */
