@@ -9,7 +9,6 @@ import { usePathname } from "next/navigation";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Session } from "next-auth";
 import { ChevronLeft, ChevronRight } from "lucide-react"; // Import icon mũi tên
-
 const Sidebar = ({ session }: { session: Session }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
   const pathname = usePathname();
@@ -41,10 +40,10 @@ const Sidebar = ({ session }: { session: Session }) => {
       </button>
 
       <div>
-        <div className="logo flex items-center gap-3">
+        <Link className="logo flex items-center gap-3" href="/">
           <Image src="/icons/admin/logo.svg" alt="logo" height={37} width={37} />
           {!isCollapsed && <h1 className="text-lg font-semibold">QIZAPY</h1>}
-        </div>
+        </Link>
 
         <div className="mt-10 flex flex-col gap-5">
           {adminSideBarLinks.map((link) => {
