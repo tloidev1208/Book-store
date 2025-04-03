@@ -689,65 +689,6 @@
   box-shadow: none;
 }
 
-/* Sidebar */
-.admin-sidebar {
-  position: sticky;
-  left: 0;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: #ffffff; /* White */
-  padding-left: 1.25rem; /* 5 * 0.25rem */
-  padding-right: 1.25rem; /* 5 * 0.25rem */
-  padding-bottom: 1.25rem; /* 5 * 0.25rem */
-  padding-top: 2.5rem; /* 10 * 0.25rem */
-}
-
-.admin-sidebar .logo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5rem; /* 2 * 0.25rem */
-  border-bottom: 1px dashed rgba(72, 187, 220, 0.2); /* Primary-admin/20 */
-  padding-bottom: 2.5rem; /* 10 * 0.25rem */
-  justify-content: center; /* max-md:justify-center */
-}
-
-.admin-sidebar .logo h1 {
-  font-size: 1.5rem; /* Text-2xl */
-  font-weight: 600; /* Font-semibold */
-  color: #1d4ed8; /* Primary-admin */
-}
-
-.admin-sidebar .link {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  gap: 0.5rem; /* 2 * 0.25rem */
-  border-radius: 0.5rem; /* Rounded-lg */
-  padding: 0.875rem 1.25rem; /* 3.5 * 0.25rem */
-  justify-content: center; /* max-md:justify-center */
-}
-
-.admin-sidebar .link p {
-  font-size: 1rem; /* Text-base */
-  font-weight: 500; /* Font-medium */
-}
-
-.admin-sidebar .user {
-  margin: 2rem 0; /* My-8 */
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  gap: 0.5rem; /* 2 * 0.25rem */
-  border-radius: 9999px; /* Rounded-full */
-  border: 1px solid #e2e8f0; /* Light-400 */
-  padding: 0.5rem 1.5rem; /* 2 * 0.25rem 6 * 0.25rem */
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Shadow-sm */
-}
-
 /* User Card */
 .user-card {
   width: 10rem; /* W-40 */
