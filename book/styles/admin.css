@@ -361,12 +361,13 @@
     flex-direction: column;
     height: 100vh; /* h-dvh */
     justify-content: space-between;
-    background-color: #ffffff; /* White */
+    background: linear-gradient(to bottom, #d0dae4, #ddd0dd); /* Gradient từ xanh pastel đến tím pastel */
     padding-left: 1.25rem; /* px-5 */
     padding-right: 1.25rem; /* px-5 */
     padding-bottom: 1.25rem; /* pb-5 */
     padding-top: 2.5rem; /* pt-10 */
 }
+
 
 .admin-sidebar .logo {
     display: flex;
@@ -408,8 +409,8 @@
     gap: 0.5rem; /* gap-2 */
     border-radius: 9999px; /* rounded-full */
     border: 1px solid #e2e8f0; /* border-light-400 */
-    padding: 0.5rem 1.5rem; /* px-6 py-2 */
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* shadow-sm */
+    padding: 0.2rem 0.2rem; /* py-4 px-3 */
 }
 
 /* User Card */
