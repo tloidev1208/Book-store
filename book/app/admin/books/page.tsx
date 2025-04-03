@@ -1,6 +1,6 @@
 import React from "react";
 
-const Pape = () => {
-    return <div></div>;
+const Page = () => {
+    return <div>Book</div>;
 };
-export default Pape;
+export default Page;
