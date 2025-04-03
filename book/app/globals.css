@@ -535,9 +535,7 @@
 .text-primary-admin {
   color: #25388C;
 }
-.bg-primary-admin {
-  background-color: #25388C;
-}
+
 .text-green {
   color: #027A48;
 }
@@ -660,61 +658,4 @@
 
 .bg-pattern {
   background-image: url('/images/pattern.webp');
-}
-/* Search */
-.admin-search {
-  display: flex;
-  border: 1px solid #f3f4f6; /* Gray-100 */
-  min-height: 3.5rem; /* 14 * 0.25rem */
-  align-items: center;
-  gap: 0.25rem; /* 1 * 0.25rem */
-  border-radius: 0.375rem; /* Rounded-md */
-  background-color: #f7fafc; /* Light-600 */
-  padding-left: 1rem; /* 4 * 0.25rem */
-  padding-right: 1rem; /* 4 * 0.25rem */
-  max-width: 28rem; /* lg:max-w-md */
-  width: 100%;
-}
-
-.admin-search_input {
-  width: 100%;
-  border: none;
-  box-shadow: none;
-  background: transparent;
-  outline: none;
-}
-
-.admin-search_input:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-/* User Card */
-.user-card {
-  width: 10rem; /* W-40 */
-  background-color: #e2e8f0; /* Light-300 */
-  padding: 1rem 0.75rem; /* Py-4 Px-3 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 0.75rem; /* Rounded-xl */
-  text-align: center;
-}
-
-.user-card .name {
-  font-weight: 500; /* Font-medium */
-  margin-top: 0.75rem; /* Mt-3 */
-  color: #4a5568; /* Dark-400 */
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.user-card .email {
-  color: #a0aec0; /* Light-500 */
-  font-size: 0.875rem; /* Text-sm */
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
