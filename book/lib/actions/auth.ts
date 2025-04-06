@@ -6,17 +6,20 @@ import { users } from "@/database/schema";
 import { hash } from "bcryptjs";
 import { signIn } from "@/auth";
 import { headers } from "next/headers";
-import ratelimit from "../ratelimit";
+import ratelimit from "@/lib/ratelimit";
 import { redirect } from "next/navigation";
-import { workflowClient } from "../workflow";
-import { Config } from "drizzle-kit";
-import config from "../config";
-
+import { workflowClient } from "@/lib/workflow";
+import config from "@/lib/config";
 
 export const signInWithCredentials = async (
-  params: Pick<AuthCredentials, "email" | "password">
+  params: Pick<AuthCredentials, "email" | "password">,
 ) => {
   const { email, password } = params;
+
+  const ip = (await headers()).get("x-forwarded-for") || "127.0.0.1";
+  const { success } = await ratelimit.limit(ip);
+
+  if (!success) return redirect("/too-fast");
 
   try {
     const result = await signIn("credentials", {
@@ -39,11 +42,10 @@ export const signInWithCredentials = async (
 export const signUp = async (params: AuthCredentials) => {
   const { fullName, email, universityId, password, universityCard } = params;
 
-  const ip = (await headers()).get(' x-forwarded-for')|| '127.0.0.1';
+  const ip = (await headers()).get("x-forwarded-for") || "127.0.0.1";
   const { success } = await ratelimit.limit(ip);
 
-  if (!success) return redirect ("/too-fast");
-
+  if (!success) return redirect("/too-fast");
 
   const existingUser = await db
     .select()
@@ -65,18 +67,27 @@ export const signUp = async (params: AuthCredentials) => {
       password: hashedPassword,
       universityCard,
     });
+
     await workflowClient.trigger({
-      url:`${config.env.prodApiEndpoint}/api/workflows/onboarding`,
-      body:{
+      url: `${config.env.prodApiEndpoint}/api/workflows/onboarding`,
+      body: {
         email,
         fullName,
-      }
+      },
     });
+
     await signInWithCredentials({ email, password });
 
     return { success: true };
   } catch (error) {
-    console.log(error, "Signup error");
-    return { success: false, error: "Signup error" };
+    console.error("Signup failed:", error);
+    console.log("API Endpoint:", config.env.prodApiEndpoint);
+
+    return { 
+      success: false, 
+      error: (error instanceof Error) ? error.message : "Signup error" 
+    };
   }
+  
+  
 };

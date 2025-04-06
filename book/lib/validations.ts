@@ -1,7 +1,4 @@
 "use client"
-
-import { sum } from "drizzle-orm";
-import { University } from "lucide-react";
 import { z } from "zod"
 
 export const signUpSchema = z.object( {
