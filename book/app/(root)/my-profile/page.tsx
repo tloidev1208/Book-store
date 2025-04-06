@@ -29,7 +29,7 @@ const Page = async () => {
   {/* 🟢 Cột trái: Thông tin sinh viên */}
 <div className="relative bg-gray-900 text-white p-6 rounded-xl shadow-lg">
   {/* 🟢 "Băng keo" phía trên */}
-  <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 w-14 h-20 bg-gray-700 rounded-b-3xl p-2">
+  <div className="absolute top-[-50px] left-1/2 -translate-x-1/2 w-14 h-20 bg-gray-700 rounded-b-3xl p-2">
   <div className="p-2 bg-gray-900 mt-10 rounded-4xl"></div>
   </div>
 
