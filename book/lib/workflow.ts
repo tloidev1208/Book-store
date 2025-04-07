@@ -26,7 +26,7 @@ export const sendEmail = async ({
       provider: resend({ token: config.env.resendToken }),
     },
     body: {
-      from: "Qizapy Teams <xinchao.qizapy.online>",
+      from: "QIZAPY Teams <noreply@xinchao.qizapy.online>",
       to: [email],
       subject,
       html: message,
