@@ -38,15 +38,28 @@ const getUserState = async (email: string): Promise<UserState> => {
   return "active";
 };
 
+// Hàm tạo nội dung email đẹp hơn
+const generateEmailContent = (title: string, message: string) => `
+  <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+    <h2 style="color: #333;">${title}</h2>
+    <p style="color: #555; font-size: 16px;">${message}</p>
+    <br/>
+    <p style="color: #777; font-size: 14px;">Trân trọng,<br/> Đội ngũ hỗ trợ Qizapy</p>
+  </div>
+`;
+
 export const { POST } = serve<InitialData>(async (context) => {
   const { email, fullName } = context.requestPayload;
 
-  // Welcome Email
+  // Gửi email chào mừng
   await context.run("new-signup", async () => {
     await sendEmail({
       email,
-      subject: "Welcome to the platform",
-      message: `Welcome ${fullName}!`,
+      subject: "🎉 Chào mừng bạn đến với Qizapy!",
+      message: generateEmailContent(
+        "Xin chào " + fullName + "!",
+        "Chúng tôi rất vui khi bạn tham gia Qizapy. Hãy bắt đầu khám phá nền tảng ngay hôm nay!"
+      ),
     });
   });
 
@@ -61,16 +74,22 @@ export const { POST } = serve<InitialData>(async (context) => {
       await context.run("send-email-non-active", async () => {
         await sendEmail({
           email,
-          subject: "Are you still there?",
-          message: `Hey ${fullName}, we miss you!`,
+          subject: "🤔 Bạn vẫn ở đó chứ, " + fullName + "?",
+          message: generateEmailContent(
+            "Chúng tôi rất nhớ bạn!",
+            `Bạn đã vắng mặt một thời gian. Hãy quay lại và tiếp tục khám phá Qizapy nhé!`
+          ),
         });
       });
     } else if (state === "active") {
       await context.run("send-email-active", async () => {
         await sendEmail({
           email,
-          subject: "Welcome back!",
-          message: `Welcome back ${fullName}!`,
+          subject: "🔥 Hoan nghênh sự trở lại của bạn!",
+          message: generateEmailContent(
+            "Chào mừng trở lại, " + fullName + "!",
+            `Thật tuyệt khi thấy bạn quay lại Qizapy. Hãy tiếp tục hành trình ngay hôm nay!`
+          ),
         });
       });
     }
