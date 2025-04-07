@@ -62,7 +62,7 @@ const BookForm = ({ type,...book}: Props) => {
                         required
                         placeholder="Nhập tên sách"
                         {...field}
-                        className="form-input"
+                        className="bg-gray-50"
                       />
                     
                   </FormControl>
@@ -83,7 +83,7 @@ const BookForm = ({ type,...book}: Props) => {
                         required
                         placeholder="Nhập tên tác giả"
                         {...field}
-                        className="form-input"
+                        className="bg-gray-50"
                       />
                     
                   </FormControl>
@@ -104,7 +104,7 @@ const BookForm = ({ type,...book}: Props) => {
                         required
                         placeholder="Thể loại sách"
                         {...field}
-                        className="form-input"
+                        className="bg-gray-50"
                       />
                     
                   </FormControl>
@@ -127,7 +127,7 @@ const BookForm = ({ type,...book}: Props) => {
                           max={5}
                         placeholder="Nhập đánh giá từ 1 đến 5"
                         {...field}
-                        className="form-input"
+                        className="bg-gray-50"
                       />
                     
                   </FormControl>
@@ -151,7 +151,7 @@ const BookForm = ({ type,...book}: Props) => {
                           max={10000}
                         placeholder="Nhập tổng số bản sao"
                         {...field}
-                        className="form-input"
+                        className="bg-gray-50"
                       />
                     
                   </FormControl>
@@ -200,7 +200,7 @@ const BookForm = ({ type,...book}: Props) => {
                     <Textarea placeholder="Mô tả sách"
                     {...field}
                      rows={10} 
-                     className="book-form input"/>
+                     className="book-form bg-gray-50"/>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -233,15 +233,15 @@ const BookForm = ({ type,...book}: Props) => {
                     <Textarea placeholder="Tóm tắt sách"
                     {...field}
                      rows={5} 
-                     className="book-form input"/>
+                     className="book-form bg-gray-50"/>
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
 
-            <Button type="submit" className="book-form-btn text-white">
-                Add Book to Library
+            <Button type="submit" className=" bg-primary-admin text-white cursor-pointer">
+                Thêm sách vào thư viện
 
             </Button>
         </form>
