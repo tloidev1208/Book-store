@@ -19,6 +19,7 @@ import { useRouter } from "next/navigation";
 import { bookSchema } from "@/lib/validations";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import FileUpload from "@/components/FileUpload";
 
 interface Props extends Partial<Book> {
     type?: " create" | "update";
@@ -168,7 +169,17 @@ const BookForm = ({ type,...book}: Props) => {
                   <FormLabel className="text-base font-normal text-dark-500">
                      Ảnh bìa sách
                   </FormLabel>
-                  <FormControl>{/* File Upload*/}</FormControl>
+                  <FormControl>
+                    <FileUpload 
+                      type="image"
+                      accept="image/*"
+                      placeholder="Tải ảnh bìa sách"
+                      folder="books/covers"
+                      variant="light"
+                      onFileChange={field.onChange}
+                      value={field.value}
+                    />
+                  </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
@@ -215,7 +226,17 @@ const BookForm = ({ type,...book}: Props) => {
                   <FormLabel className="text-base font-normal text-dark-500">
                     Video giới thiệu sách
                   </FormLabel>
-                  <FormControl>{/* File Upload*/}</FormControl>
+                  <FormControl>
+                  <FileUpload 
+                      type="video"
+                      accept="video/*"
+                      placeholder="Tải đoạn giới thiệu sách"
+                      folder="books/videos"
+                      variant="light"
+                      onFileChange={field.onChange}
+                      value={field.value}
+                    />
+                  </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
