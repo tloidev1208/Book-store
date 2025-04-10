@@ -20,10 +20,12 @@ import { bookSchema } from "@/lib/validations";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import FileUpload from "@/components/FileUpload";
+import ColorPicker from "../ColorPicker";
 
 interface Props extends Partial<Book> {
     type?: " create" | "update";
 }
+
 
 const BookForm = ({ type,...book}: Props) => {
   const router = useRouter();
@@ -44,7 +46,9 @@ const BookForm = ({ type,...book}: Props) => {
 
     }
 });
-    const onSubmit= async (values: z.infer<typeof bookSchema>) => {};
+    const onSubmit= async (values: z.infer<typeof bookSchema>) => {
+      console.log(values);
+    };
 
   return (
     
@@ -193,7 +197,12 @@ const BookForm = ({ type,...book}: Props) => {
                   <FormLabel className="text-base font-normal text-dark-500">
                      Màu bìa sách
                   </FormLabel>
-                  <FormControl>{/*Color Picker*/}</FormControl>
+                  <FormControl>
+                    <ColorPicker
+                      onPickChange={field.onChange}
+                      value={field.value}
+                    />
+                  </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
