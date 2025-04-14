@@ -15,12 +15,18 @@ interface Book {
 }
 
 interface AuthCredentials {
+  id: string;
   fullName: string;
   email: string;
   password: string;
   universityId: number;
   universityCard: string;
+  status: "PENDING" | "APPROVED" | "REJECTED" | null;
+  role: "USER" | "ADMIN" | null;
+  lastActivityDate: string | null;
+  createdAt: Date | null; // Đúng với camelCase
 }
+
 
 interface BookParams {
   title: string;
