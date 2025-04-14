@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Table from "./table/table";
 
 const Page = () => {
   return (
@@ -15,7 +16,7 @@ const Page = () => {
       </div>
 
       <div className="mt-7 w-full overflow-hidden">
-        <p>Bảng</p>
+      <Table />
       </div>
     </section>
   );
