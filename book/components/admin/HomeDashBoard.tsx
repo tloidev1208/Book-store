@@ -2,6 +2,22 @@ import React from "react";
 import { db } from "@/database/drizzle";
 import { books, users } from "@/database/schema";
 import DashboardLatestBooks from "./DashboardLatestBooks";
+import { format } from "date-fns";
+import { vi } from "date-fns/locale";
+import DashboardChart from "./DashboardChart";
+
+function groupByMonth(items: { createdAt: Date | null }[]) {
+  const stats: Record<string, number> = {};
+
+  items.forEach((item) => {
+    if (item.createdAt) {
+      const month = format(item.createdAt, "MM/yyyy", { locale: vi });
+      stats[month] = (stats[month] || 0) + 1;
+    }
+  });
+
+  return stats;
+}
 export default async function HomeDashBoard() {
   // 🔢 Lấy tổng số sách
   const totalBooksResult = await db.select().from(books);
@@ -10,6 +26,20 @@ export default async function HomeDashBoard() {
   // 👤 Lấy tổng số người dùng
   const totalUsersResult = await db.select().from(users);
   const totalUsers = totalUsersResult.length;
+  const booksData = await db.select().from(books);
+  const usersData = await db.select().from(users);
+
+  const booksPerMonth = groupByMonth(booksData);
+  const usersPerMonth = groupByMonth(usersData);
+
+  // Gộp lại các tháng có trong cả hai
+  const allMonths = Array.from(new Set([...Object.keys(booksPerMonth), ...Object.keys(usersPerMonth)])).sort();
+
+  const chartData = allMonths.map((month) => ({
+    month,
+    books: booksPerMonth[month] || 0,
+    users: usersPerMonth[month] || 0,
+  }));
 
   return (
     <div className="p-4">
@@ -28,6 +58,7 @@ export default async function HomeDashBoard() {
         </div>
       </div>
       <DashboardLatestBooks />
+      <DashboardChart data={chartData} />
     </div>
   );
 }
