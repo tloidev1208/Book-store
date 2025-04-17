@@ -1,7 +1,7 @@
 import BookList from "@/components/BookList";
 import BookOverview from "@/components/BookOverview";
 import { db } from "@/database/drizzle";
-import { books, users } from "@/database/schema";
+import { books } from "@/database/schema";
 import { auth } from "@/auth";
 import { desc } from "drizzle-orm";
 
@@ -19,8 +19,8 @@ const Home = async () => {
       <BookOverview {...latestBooks[0]} />
 
       <BookList
-        title="Latest Books"
-        books={latestBooks.slice(1)}
+        title="Sách mới cập nhật"
+        books={latestBooks.slice(0, 10)}
         containerClassName="mt-28"
       />
     </>
