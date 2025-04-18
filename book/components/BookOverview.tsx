@@ -1,18 +1,24 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import {Button} from "@/components/ui/button";
 import BookCover from "./BookCover";
 import Link from "next/link";
+import BorrowBook from "./BorrowBook";
+import {users} from "@/database/schema";
+import {eq} from "drizzle-orm";
+import {db} from "@/database/drizzle";
 
-type BookOverviewProps = Book & {
-  id: string;
-  userId?: string;
-};
-
-const BookOverview = ({
-  id,
+// type BookOverviewProps = Book & {
+//   id: string;
+//   userId?: string;
+//   idBorrow: string;
+//   bookId: string;
+// };
+interface Props extends Book {
+  userId: string;
+  idBorrow: string;
+}
+const BookOverview = async ({
   title,
   author,
   genre,
@@ -22,7 +28,22 @@ const BookOverview = ({
   description,
   coverColor,
   coverUrl,
-}: BookOverviewProps) => {
+  id,
+  userId,
+}: Props) => {
+  const [user] = await db
+    .select()
+    .from(users)
+    .where(eq(users.id, userId))
+    .limit(1);
+
+  const borrowingEligibility = {
+    isEligible: availableCopies > 0 && user?.status === "APPROVED",
+    message:
+      availableCopies <= 0
+        ? "Book is not available"
+        : "You are not eligible to borrow this book",
+  };
   return (
     <section className="book-overview">
       {/* LEFT SIDE */}
@@ -59,12 +80,11 @@ const BookOverview = ({
 
         <div className="flex gap-4 mt-6">
           {/* Nút mượn sách */}
-          <Button className="book-overivew_btn cursor-pointer">
-            <Image src="/icons/book.svg" alt="book" width={20} height={20} />
-            <p className="font-bebas-neue text-xl text-dark-100 ml-2">
-              Mượn sách
-            </p>
-          </Button>
+          <BorrowBook
+            bookId={id}
+            userId={userId}
+            borrowingEligibility={borrowingEligibility}
+          />
 
           {/* Nút đọc sách */}
           <Link href={`/books/read/${id}`} passHref>

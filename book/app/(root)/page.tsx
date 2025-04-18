@@ -1,9 +1,9 @@
 import BookList from "@/components/BookList";
 import BookOverview from "@/components/BookOverview";
-import { db } from "@/database/drizzle";
-import { books } from "@/database/schema";
-import { auth } from "@/auth";
-import { desc } from "drizzle-orm";
+import {db} from "@/database/drizzle";
+import {books} from "@/database/schema";
+import {auth} from "@/auth";
+import {desc} from "drizzle-orm";
 
 const Home = async () => {
   const session = await auth();
@@ -27,4 +27,4 @@ const Home = async () => {
   );
 };
 
-export default Home;    
+export default Home;
