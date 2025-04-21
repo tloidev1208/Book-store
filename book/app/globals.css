@@ -718,3 +718,11 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+.bg-popover{
+  background-color: #191919;
+}
+
+.text-popover-foreground {
+  color: #f8f9fa;
+}
