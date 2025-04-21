@@ -4,9 +4,9 @@ import {
   integer,
   text,
   pgTable,
+  date,
   pgEnum,
   timestamp,
-  date,
 } from "drizzle-orm/pg-core";
 
 export const STATUS_ENUM = pgEnum("status", [
@@ -43,15 +43,13 @@ export const books = pgTable("books", {
   rating: integer("rating").notNull(),
   coverUrl: text("cover_url").notNull(),
   coverColor: varchar("cover_color", { length: 7 }).notNull(),
-  description: text("description").notNull(), 
+  description: text("description").notNull(),
   totalCopies: integer("total_copies").notNull().default(1),
-  availableCopies: integer("available_copies").notNull().default(0), 
-  videoUrl: text("video_url").notNull(), 
+  availableCopies: integer("available_copies").notNull().default(0),
+  videoUrl: text("video_url").notNull(),
   summary: varchar("summary").notNull(),
-  createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(), 
+  createdAt: timestamp("created_at", { withTimezone: true }).defaultNow(),
 });
-
-
 
 export const borrowRecords = pgTable("borrow_records", {
   id: uuid("id").notNull().primaryKey().defaultRandom().unique(),

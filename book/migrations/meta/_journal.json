@@ -5,22 +5,8 @@
     {
       "idx": 0,
       "version": "7",
-      "when": 1743484691673,
-      "tag": "0000_mushy_red_skull",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "7",
-      "when": 1744553718796,
-      "tag": "0001_outgoing_skaar",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "7",
-      "when": 1744910129694,
-      "tag": "0002_overjoyed_phalanx",
+      "when": 1744960962404,
+      "tag": "0000_soft_umar",
       "breakpoints": true
     }
   ]

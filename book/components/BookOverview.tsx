@@ -30,6 +30,7 @@ const BookOverview = async ({
   coverUrl,
   id,
   userId,
+  idBorrow,
 }: Props) => {
   const [user] = await db
     .select()

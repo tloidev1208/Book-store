@@ -20,9 +20,11 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
   if (!bookDetails) redirect("/404");
 
+  const idBorrow = bookDetails.id;
   return (
     <>
-      <BookOverview {...bookDetails} userId={session?.user?.id as string} />
+           <BookOverview {...bookDetails} userId={session?.user?.id as string} idBorrow={idBorrow} />
+
 
       <div className="book-details">
         
