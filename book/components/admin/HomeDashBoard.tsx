@@ -1,6 +1,6 @@
 import React from "react";
 import { db } from "@/database/drizzle";
-import { books, users } from "@/database/schema";
+import { books, borrowRecords, users } from "@/database/schema";
 import DashboardLatestBooks from "./DashboardLatestBooks";
 import { format } from "date-fns";
 import { vi } from "date-fns/locale";
@@ -22,6 +22,10 @@ export default async function HomeDashBoard() {
   // 🔢 Lấy tổng số sách
   const totalBooksResult = await db.select().from(books);
   const totalBooks = totalBooksResult.length;
+
+    // 🔢 Lấy tổng số yêu cầu
+    const totalBooksRequest = await db.select().from(borrowRecords);
+    const totalRequest = totalBooksRequest.length;
 
   // 👤 Lấy tổng số người dùng
   const totalUsersResult = await db.select().from(users);
@@ -54,7 +58,7 @@ export default async function HomeDashBoard() {
         </div>
         <div className="bg-white text-black p-6 rounded-lg shadow-md text-left">
           <h2 className="text-lg font-sans text-gray-600">Yêu cầu mượn sách</h2>
-          <p className="text-3xl font-semibold">--</p>
+          <p className="text-3xl font-semibold">{totalRequest}</p>
         </div>
       </div>
       <DashboardLatestBooks />
